@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Enter static data in Database"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:text="Date"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+
+            <Button
+                android:id="@+id/setDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="Set Date"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@drawable/login_button_background"/>
+        </LinearLayout>
+
+        <!--<EditText-->
+            <!--andrtag_idd:idtag_id@+id/distance"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Enter Distance"-->
+            <!--android:textColorHint="#8cf9914b"-->
+            <!--android:textColor="#f9914b"-->
+            <!--android:inputType="number" />-->
+
+        <EditText
+            android:id="@+id/food_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Food Type"
+            android:textColorHint="#8cf9914b"
+            android:textColor="#f9914b"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/calories_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Calories"
+            android:textColorHint="#8cf9914b"
+            android:textColor="#f9914b"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/fat_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fat"
+            android:textColorHint="#8cf9914b"
+            android:textColor="#f9914b"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/carbs_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Carbs"
+            android:textColorHint="#8cf9914b"
+            android:textColor="#f9914b"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/sugar_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Protein"
+            android:inputType="number"
+            android:textColor="#f9914b"
+            android:textColorHint="#8cf9914b"/>
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:inputType="number"
+            android:background="@drawable/login_button_background"
+            android:text="Save"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+</ScrollView>

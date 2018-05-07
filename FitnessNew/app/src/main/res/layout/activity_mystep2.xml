@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:tool="http://schemas.android.com/apk/res-auto"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                tools:context="com.ritikakhiria.fitnessnew.activity.MySteps">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dip"
+        android:layout_alignParentTop="true">
+
+        <com.txusballesteros.widgets.FitChart
+            android:id="@+id/fitChart"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:animationMode="overdraw"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/lblActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:text="ACTIVITY"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/black"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/steps_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblActivity"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:maxWidth="200dp"
+            android:text="STEPS"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutActivities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout"
+        android:padding="10dp">
+
+        <!--<ScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_step"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageRunning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/circle_activity1"
+                    android:contentDescription="@string/running"
+                    android:padding="16dp"
+                    android:src="@drawable/icons_running"/>
+
+                <TextView
+                    android:id="@+id/textRunning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="12 min"
+                    android:padding="4dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_alignTop="@+id/imageCaloriesBurned"
+                    android:layout_toEndOf="@+id/imageRunning"/>
+
+                <ImageView
+                    android:id="@+id/imageWalking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@+id/imageRunning"
+                    android:background="@drawable/circle_activity2"
+                    android:contentDescription="@string/walking"
+                    android:padding="16dp"
+                    android:src="@drawable/icons_walking"/>
+
+                <TextView
+                    android:id="@+id/textWalking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imageWalking"
+                    android:padding="4dp"
+                    tools:text="10 min"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_below="@+id/imageRunning"/>
+
+                <ImageView
+                    android:id="@+id/imageStairs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageWalking"
+                    android:background="@drawable/circle_activity1"
+                    android:contentDescription="@string/walking"
+                    android:padding="16dp"
+                    android:src="@drawable/icons_stairs"/>
+
+                <TextView
+                    android:id="@+id/textStairs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imageStairs"
+                    android:layout_below="@+id/imageWalking"
+                    android:padding="4dp"
+                    tools:text="15 min"
+                    android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+                <ImageView
+                    android:id="@+id/imageCaloriesBurned"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="16dp"
+                    android:background="@drawable/circle_activity2"
+                    android:contentDescription="@string/running"
+                    android:src="@drawable/icons_calories"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:id="@+id/lblCaloriesBurned"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="50 cal"
+                    android:padding="4dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_above="@+id/imageWalking"
+                    android:layout_toStartOf="@+id/imageCaloriesBurned"/>
+
+                <ImageView
+                    android:id="@+id/imageDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageCaloriesBurned"
+                    android:background="@drawable/circle_activity1"
+                    android:contentDescription="@string/walking"
+                    android:padding="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/icons_distance"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:id="@+id/lblDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    tools:text="1.2 km"
+                    android:layout_marginTop="20dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_below="@+id/textWalking"
+                    android:layout_toStartOf="@+id/imageDistance"/>
+
+                <Button
+                    style="@style/login_button_style"
+                    android:id="@+id/start_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:enabled="false"
+                    android:text="START"
+                    android:textColor="@android:color/white"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"/>
+
+
+            </RelativeLayout>
+
+        <!--</ScrollView>-->
+
+    </RelativeLayout>
+
+</RelativeLayout>

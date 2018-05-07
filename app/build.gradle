@@ -1,0 +1,104 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.ritikakhiria.fitnessnew"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+repositories {
+    maven { url "https://jitpack.io" }
+    maven { url 'https://maven.fabric.io/public' }
+    jcenter()
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    // Event Bus
+    // sqlcipher
+    //not working tracker activity proper when used below play-services:10.2.1
+    //compile 'com.google.android.gms:play-services:10.2.1'
+    // retrofit, gson
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+        transitive = true;
+    }
+
+    // CardView
+
+    // FitChart
+
+    // CuboidCircleButton
+
+    // Google play service
+
+    // Database
+
+    // CircularImageView
+
+    // SearchView
+
+    // Glide
+
+    // MPAndroidChart
+
+    // Parser and EventBus
+
+    // Volley
+
+    // Barcode ZXing library
+
+    // Seek Bar
+
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.txusballesteros:FitChart:1.0'
+    compile 'com.cuboid:cuboidcirclebutton:1.0.3'
+    compile 'com.google.android.gms:play-services:11.0.4'
+    compile 'net.zetetic:android-database-sqlcipher:3.5.7@aar'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.miguelcatalan:materialsearchview:1.4.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.picasso:picasso:2.4.0'
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.0'
+    compile 'com.prof.rssparser:rssparser:1.1'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.journeyapps:zxing-android-embedded:3.4.0'
+    compile 'org.adw.library:discrete-seekbar:1.0.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.birbit:android-priority-jobqueue:2.0.0-beta1'
+}

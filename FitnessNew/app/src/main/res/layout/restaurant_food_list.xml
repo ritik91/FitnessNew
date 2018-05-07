@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="5dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="3dp">
+
+        <LinearLayout
+            android:id="@+id/ll_particular_product_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".5"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/restaurantFoodImage"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:padding="4dp"
+                    android:src="@drawable/image_not_available"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/restaurantFoodName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        tools:text="White Chocolate Mocha"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/restaurantBrandName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/restaurantFoodName"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        tools:text="Starbucks"
+                        android:textColor="@color/heading_gray"
+                        android:textSize="18sp"
+                        android:textStyle="italic"/>
+
+                    <TextView
+                        android:id="@+id/restaurantFoodCalorie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/restaurantFoodName"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/restaurantBrandName"
+                        tools:text="120"
+                        android:textColor="@color/heading_gray"
+                        android:textSize="18sp"
+                        android:textStyle="italic"/>
+                    <TextView
+                        android:id="@+id/restaurantFoodCalorieUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/restaurantFoodName"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_toRightOf="@+id/restaurantFoodCalorie"
+                        android:text="kcal"
+                        android:textColor="@color/heading_gray"
+                        android:textSize="18sp"
+                        android:textStyle="italic"/>
+
+                    <TextView
+                        android:id="@+id/restaurantFoodServingQtyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/restaurantBrandName"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:text="Serving Qty:"
+                        android:textColor="@color/heading_gray"
+                        android:textSize="18sp"
+                        android:textStyle="italic"/>
+                    <TextView
+                        android:id="@+id/restaurantFoodServingQty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/restaurantBrandName"
+                        android:layout_toRightOf="@+id/restaurantFoodServingQtyText"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="5dp"
+                        tools:text="Serving Qty"
+                        android:textColor="@color/heading_gray"
+                        android:textSize="18sp"
+                        android:textStyle="italic"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_weight=".5"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<ImageButton-->
+                    <!--android:id="@+id/restaurantAddButton"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:background="@drawable/icons_plus"-->
+                    <!--android:padding="3dp"/>-->
+
+            <!--</LinearLayout>-->
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/app_back">
+
+    <!--<android.support.design.widget.AppBarLayout-->
+        <!--android:id="@+id/lytTopBar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--app:elevation="0dp">-->
+
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
+            <!--android:background="?attr/colorPrimary"-->
+            <!--app:popupTheme="@style/AppTheme.PopupOverlay" />-->
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <com.ritikakhiria.fitnessnew.widget.StatefulRecyclerView
+        android:id="@+id/recycle_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#ffffff" />
+
+    <TextView
+        android:id="@+id/txerror"
+        style="@style/emptyText"
+        android:layout_centerHorizontal="true"
+        android:text="No History"
+        android:visibility="gone" />
+
+    <!--<include
+        android:id="@+id/progress"
+        layout="@layout/progress_avld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />-->
+
+</RelativeLayout>

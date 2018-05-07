@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ritikakhiria.fitnessnew">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/fitness"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/fitness"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.Splash"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.Login"
+            android:label="@string/title_activity_login"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.Register"
+            android:label="Register"
+            android:parentActivityName=".activity.Login" />
+        <activity
+            android:name=".activity.ForgotPassword"
+            android:label="Forgot Password"
+            android:parentActivityName=".activity.Login" />
+        <activity
+            android:name=".activity.MainDashboard"
+            android:label="@string/title_activity_main_dashboard"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".activity.Profile"
+            android:label="Profile"
+            android:parentActivityName=".activity.MainDashboard"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.MySteps"
+            android:label="Activity Tracker"
+            android:parentActivityName=".activity.MainDashboard" />
+        <activity
+            android:name=".activity.DietChart"
+            android:label="Meal Planner"
+            android:parentActivityName=".activity.DietType" />
+        <activity
+            android:name=".activity.DietType"
+            android:parentActivityName=".activity.MainDashboard" />
+        <activity
+            android:name=".activity.TrackMeNewActivity"
+            android:label="Track Me"
+            android:parentActivityName=".activity.MainDashboard" />
+        <activity
+            android:name=".activity.HistoryChartActivity"
+            android:label="Activity Report"
+            android:parentActivityName=".activity.TrackMeNewActivity" />
+        <activity
+            android:name=".activity.NutritionChartActivity"
+            android:exported="true"
+            android:label="Food &amp; Nutrition Report"
+            android:parentActivityName=".activity.TrackMeNewActivity" />
+        <!--<activity-->
+            <!--android:name=".activity.HistoryActivity"-->
+            <!--android:parentActivityName=".activity.MainDashboard"-->
+            <!--android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".activity.HealthBlog"
+            android:label="Health Blog"
+            android:parentActivityName=".activity.MainDashboard" />
+        <activity
+            android:name=".activity.HealthBlogDetailActivity"
+            android:label="Detail"
+            android:parentActivityName=".activity.HealthBlog" />
+
+        <activity
+            android:name=".activity.UserLogActivity"
+            android:label="User Log"
+            android:parentActivityName=".activity.MainDashboard" />
+
+        <!--<activity android:name=".activity.RecipeSearchActivity"-->
+                  <!--android:parentActivityName=".activity.DietType"/>-->
+
+        <!--<activity andrrecipeFoodNamename=".fragment.GoalCalSeekBar"-->
+            <!--android:parentActivityName=".activity.HistoryChartActivity"/>-->
+
+        <activity android:name=".activity.AddStaticDataActivity"
+                  android:label="Add Static Data"
+            android:parentActivityName=".activity.HistoryChartActivity"/>
+
+        <receiver android:name=".Utils.NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.AddStaticFoodData"
+                  android:label="Add Static Food Data"
+                  android:parentActivityName=".activity.NutritionChartActivity"/>
+
+
+
+
+        <!-- <activity andrrecipeFoodNamename=".activity.TrackerActivity" /> -->
+
+        <service android:name=".Utils.ActivityRecognizedService" />
+        <service android:name=".service.StepCountingService" />
+
+        <!-- For database -->
+        <provider
+            android:name=".db.MyContentProvider"
+            android:authorities="com.ritikakhiria.fitnessnew"
+            android:enabled="true"
+            android:exported="false" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="bb1216d8a9383cfebd2434ebbf5ff3c7399233e3" />
+
+        <receiver android:name=".Utils.NotificationPublisher" />
+        <receiver
+            android:name=".service.ConnectionReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".Utils.NotificationService"
+            android:enabled="true" />
+        <activity
+            android:name=".activity.BarcodeAndSearchRecipeActivity"
+            android:parentActivityName=".activity.DietType"/>
+
+        <activity android:name=".activity.StepsBarGraph"
+            android:label="Steps BarChart"
+            android:parentActivityName=".activity.MySteps"/>
+
+        <activity android:name=".activity.RunningBarGraph"
+                  android:label="Running BarChart"
+                  android:parentActivityName=".activity.MySteps"/>
+
+        <activity android:name=".activity.WalkingBarGraph"
+                  android:label="Walking BarChart"
+                  android:parentActivityName=".activity.MySteps"/>
+
+        <activity android:name=".activity.StairsBarGraph"
+                  android:label="Stairs BarChart"
+                  android:parentActivityName=".activity.MySteps"/>
+
+        <activity android:name=".activity.CaloriesBarGraph"
+                  android:label="Calories BarChart"
+                  android:parentActivityName=".activity.MySteps"/>
+
+        <activity android:name=".activity.DistanceBarGraph"
+                  android:label="Distance BarChart"
+                  android:parentActivityName=".activity.MySteps"/>
+
+        <activity android:name=".activity.BreakFastBarGarph"
+            android:label="Breakfast BarChart"
+            android:parentActivityName=".activity.DietType"/>
+
+        <activity android:name=".activity.LunchBarGraph"
+            android:label="Lunch BarChart"
+            android:parentActivityName=".activity.DietType"/>
+
+        <activity android:name=".activity.DinnerBarGraph"
+            android:label="Dinner BarChart"
+            android:parentActivityName=".activity.DietType"/>
+
+        <service
+            android:name=".service.AppJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".service.AppGcmJobService"
+            android:exported="true"
+            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="@drawable/app_back"
+                tools:context="com.ritikakhiria.fitnessnew.fragment.LineChartWeeklyFragment">
+
+    <RelativeLayout
+        android:id="@+id/calculation_avg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/minCal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/icons_min_value"/>
+        <TextView
+            android:id="@+id/minCalValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="20 kcal/day"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/minCal"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"/>
+
+        <ImageView
+            android:id="@+id/avgCal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/minCalValue"
+            android:src="@drawable/icons_avg_value"/>
+        <TextView
+            android:id="@+id/avgCalValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="20 kcal/day"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/avgCal"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"/>
+
+        <ImageView
+            android:id="@+id/maxCal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/avgCalValue"
+            android:src="@drawable/icons_max_value"/>
+        <TextView
+            android:id="@+id/maxCalValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="20 kcal/day"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/maxCal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@+id/calculation_avg">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/seekBar1" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/icons_wire"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="@color/chart_value_3"
+            app:elevation="5dp"/>
+
+    </FrameLayout>
+</RelativeLayout>
+

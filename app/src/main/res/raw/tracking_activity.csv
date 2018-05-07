@@ -1,0 +1,8 @@
+saveDate,totalCalories,totalSteps,totalDistance,totalWalking,totalRunning,totalStairs
+SUN,5,29,1.2,14,15,0
+MON,20,120,2.5,100,20,0
+TUE,48,168,4.3,110,50,8
+WED,125,350,5.4,165,100,85
+THUR,10,20,2.1,10,5,5
+FRI,350,1000,6,520,400,80
+SAT,40,150,3.2,100,25,25

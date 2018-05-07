@@ -1,0 +1,217 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.ritikakhiria.fitnessnew.activity.NutritionChartActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.8">
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/chart1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/pie_fat"
+                    style="@style/pie_chart_style"
+                    android:background="@color/colorFat"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/str_fat"/>
+
+                <TextView
+                    android:id="@+id/tv_fat"
+                    style="@style/pie_chart_value_style"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/pie_fat"/>
+
+                <TextView
+                    android:id="@+id/pie_carbs"
+                    style="@style/pie_chart_style"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/tv_fat"
+                    android:background="@color/colorCarb"
+                    android:text="@string/str_carbs"/>
+
+                <TextView
+                    android:id="@+id/tv_carbs"
+                    style="@style/pie_chart_value_style"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/pie_carbs"/>
+
+                <!--<TextView-->
+                    <!--android:id="@+id/pie_sugar"-->
+                    <!--style="@style/pie_chart_style"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_toRightOf="@+id/tv_carbs"-->
+                    <!--android:background="@color/colorSugar"-->
+                    <!--android:text="@string/str_sugar"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_sugar"-->
+                    <!--style="@style/pie_chart_value_style"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="5dp"-->
+                    <!--android:layout_toRightOf="@+id/pie_sugar"/>-->
+
+                <TextView
+                    android:id="@+id/pie_protein"
+                    style="@style/pie_chart_style"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignStart="@+id/pie_fat"
+                    android:layout_below="@+id/pie_fat"
+                    android:background="@color/colorSugar"
+                    android:text="@string/str_protein"/>
+
+                <TextView
+                    android:id="@+id/tv_protein"
+                    style="@style/pie_chart_value_style"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/tv_fat"
+                    android:layout_toRightOf="@+id/pie_protein"/>
+
+                <TextView
+                    android:id="@+id/pie_other"
+                    style="@style/pie_chart_style"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@+id/pie_carbs"
+                    android:layout_toRightOf="@+id/tv_protein"
+                    android:background="@color/colorCalories"
+                    android:text="@string/str_calories"/>
+
+                <TextView
+                    android:id="@+id/tv_others"
+                    style="@style/pie_chart_value_style"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/tv_carbs"
+                    android:layout_toRightOf="@+id/pie_other"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp">
+
+                <TextView
+                    android:id="@+id/avg_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Average Value:"
+                    android:textStyle="italic|bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:id="@+id/avg_fat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icons_lipids"
+                    android:layout_below="@+id/avg_text"/>
+                <TextView
+                    android:id="@+id/avg_fat_value"
+                    style="@style/pie_chart_avg_value_style"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/avg_text"
+                    android:layout_toRightOf="@+id/avg_fat"/>
+
+                <ImageView
+                    android:id="@+id/avg_carbs"
+                    style="@style/pie_chart_avg_img_style"
+                    android:layout_marginLeft="15dp"
+                    android:layout_below="@+id/avg_text"
+                    android:layout_toRightOf="@+id/avg_fat_value"
+                    android:src="@drawable/icons_carbohydrates"/>
+                <TextView
+                    android:id="@+id/avg_carbs_value"
+                    style="@style/pie_chart_avg_value_style"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/avg_text"
+                    android:layout_toRightOf="@+id/avg_carbs"/>
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/avg_sugar"-->
+                    <!--style="@style/pie_chart_avg_img_style"-->
+                    <!--android:layout_marginLeft="15dp"-->
+                    <!--android:layout_below="@+id/avg_text"-->
+                    <!--android:layout_toRightOf="@+id/avg_carbs_value"-->
+                    <!--android:src="@drawable/icons_sugar"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/avg_sugar_value"-->
+                    <!--style="@style/pie_chart_avg_value_style"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_below="@+id/avg_text"-->
+                    <!--android:layout_toRightOf="@+id/avg_sugar"/>-->
+
+                <ImageView
+                    android:id="@+id/avg_protein"
+                    style="@style/pie_chart_avg_img_style"
+                    android:layout_alignTop="@+id/avg_protein_value"
+                    android:layout_below="@+id/avg_fat"
+                    android:src="@drawable/icons_protein1"/>
+                <TextView
+                    android:id="@+id/avg_protein_value"
+                    style="@style/pie_chart_avg_value_style"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/avg_fat_value"
+                    android:layout_toRightOf="@+id/avg_protein"/>
+
+                <ImageView
+                    android:id="@+id/avg_calories"
+                    style="@style/pie_chart_avg_img_style"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_below="@+id/avg_carbs"
+                    android:layout_toRightOf="@+id/avg_protein_value"
+                    android:src="@drawable/icons_calories1"/>
+                <TextView
+                    android:id="@+id/avg_calories_value"
+                    style="@style/pie_chart_avg_value_style"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/avg_carbs_value"
+                    android:layout_toRightOf="@+id/avg_calories"/>
+
+            </RelativeLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

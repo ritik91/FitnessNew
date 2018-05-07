@@ -1,0 +1,278 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- LoginActivity EditText style -->
+    <style name="edit_text_style">
+        <!-- <item name="android:background">#5e5f60</item> -->
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">10</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">@drawable/edit_text_round</item>
+    </style>
+
+    <!-- LoginActivity button style -->
+    <style name="login_button_style">
+        <item name="android:background">@drawable/login_button_background</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <!-- SignUp EditText style -->
+    <style name="signUp_edit_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">@android:color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!-- Gender ratio button style - register screen -->
+    <style name="ratio_button_style">
+        <item name="android:textColor">@color/view_line_color</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- Dashboard round circle style -->
+    <style name="dashboard_round_button">
+        <item name="android:layout_width">130dp</item>
+        <item name="android:layout_height">130dp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- User profile layout style -->
+    <style name="user_profile_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <!--<item name="android:padding">5dp</item>-->
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="Heading">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="SubHeading">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!--<item name="android:layout_marginTop">3dp</item>-->
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/clientSubHeading</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="ListItem">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textColor">@color/list_item_blue</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="emptyText">
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+   <!--Tab layout for report activity tracker-->
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabBackground">@color/colorPrimaryDark</item>
+        <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+
+    <!-- Activity report button style -->
+    <style name="bigButtonLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">40dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/big_button_round</item>
+    </style>
+
+    <!-- Main meal planner screen tab style -->
+    <!-- Meal planner relative layout calorie calculation style -->
+    <style name="fixed_text_calories_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!--<item name="android:layout_weight">1</item>-->
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+    </style>
+
+    <style name="fixed_text_calories_style1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!--<item name="android:layout_weight">1</item>-->
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="text_nutrient_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!--<item name="android:layout_weight">1</item>-->
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+    </style>
+
+    <style name="text_nutrient_style1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!--<item name="android:layout_weight">1</item>-->
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="text_calorie_calculation_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+    </style>
+
+    <style name="calorie_calculation_image">
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">15dp</item>
+        <!--<item name="android:layout_marginTop">13dp</item>-->
+        <!--<item name="android:layout_marginLeft">5dp</item>-->
+        <!--<item name="android:layout_marginRight">5dp</item>-->
+        <!--<item name="android:layout_centerHorizontal">true</item>-->
+    </style>
+
+    <!-- SearchView style -->
+    <style name="MaterialSearchViewStyle">
+        <!-- Background for the search bar-->
+        <item name="searchBackground">@color/colorPrimary</item>
+        <!-- Change voice icon-->
+        <item name="searchVoiceIcon">@drawable/ic_action_voice_search_inverted</item>
+        <!-- Change clear text icon-->
+        <item name="searchCloseIcon">@drawable/ic_action_navigation_close_inverted</item>
+        <!-- Change up icon-->
+        <item name="searchBackIcon">@drawable/ic_action_navigation_arrow_back_inverted</item>
+        <!-- Change icon for the suggestions-->
+        <item name="searchSuggestionIcon">@drawable/ic_suggestion</item>
+        <!-- Change background for the suggestions list view-->
+        <item name="searchSuggestionBackground">@android:color/white</item>
+        <!-- Change text color for edit text. This will also be the color of the cursor-->
+        <item name="android:textColor">@color/theme_primary_text_inverted</item>
+        <!-- Change hint text color for edit text-->
+        <item name="android:textColorHint">@color/theme_secondary_text_inverted</item>
+        <!-- Hint for edit text-->
+        <item name="android:hint">@string/search_hint</item>
+    </style>
+
+    <!-- Search EditText style -->
+    <style name="edit_search_text_style">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:ems">10</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:background">@drawable/search_text_style</item>
+    </style>
+
+    <!-- Pie chart text layout style -->
+    <style name="pie_chart_style">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Pie chart text value layout style -->
+    <style name="pie_chart_value_style">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:text">@string/zero</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/border_on_textview</item>
+    </style>
+
+    <!-- Pie chart avg image view layout style -->
+    <style name="pie_chart_avg_img_style">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/border_on_textview</item>
+    </style>
+
+    <!-- Pie chart text value layout style -->
+    <style name="pie_chart_avg_value_style">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:text">12 g</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/border_on_textview</item>
+    </style>
+
+</resources>

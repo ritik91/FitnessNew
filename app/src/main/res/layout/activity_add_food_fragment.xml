@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              tools:context="com.ritikakhiria.fitnessnew.fragment.AddFoodsFragment">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout_add_food"
+        app:tabIndicatorColor="#EF0777"
+        app:tabTextColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_addFood"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+
+        <!--<android.support.v4.view.PagerTabStrip-->
+        <!--android:id="@+id/pager_header"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/primary_color"-->
+        <!--android:layout_gravity="top"-->
+        <!--android:paddingBottom="4dp"-->
+        <!--android:paddingTop="4dp"/>-->
+
+    <!--</android.support.v4.view.ViewPager>-->
+
+</LinearLayout>

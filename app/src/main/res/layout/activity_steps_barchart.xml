@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.ritikakhiria.fitnessnew.fragment.LineChartWeeklyFragment">
+
+    <FrameLayout
+        android:id="@+id/stepsBarChart"
+        android:layout_width="match_parent"
+        android:layout_height="380dp">
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+    <com.ritikakhiria.fitnessnew.widget.StatefulRecyclerView
+        android:id="@+id/stepsRCView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stepsBarChart"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/txerror"
+        style="@style/emptyText"
+        android:layout_gravity="center"
+        android:text="No History"
+        android:visibility="gone"/>
+
+</RelativeLayout>

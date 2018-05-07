@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/parentPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        card_view:cardElevation="3dp"
+        card_view:cardCornerRadius="0dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/tvTimestamp"
+                style="@style/Heading"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/tvSteps"
+                android:ellipsize="end"
+                android:text="Timestamp"
+                android:maxLines="1"/>
+
+            <TextView
+                android:id="@+id/tvSteps"
+                style="@style/ListItem"
+                android:layout_alignParentRight="true"
+                android:text="Steps"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvDistance"
+                style="@style/SubHeading"
+                android:layout_below="@+id/tvTimestamp"
+                android:text="Distance" />
+
+            <TextView
+                android:id="@+id/tv_carbs"
+                style="@style/SubHeading"
+                android:layout_below="@+id/tvDistance"
+                android:text="Calories Burned" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_carbs"
+                android:layout_marginTop="5dp">
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_protein"-->
+                    <!--style="@style/SubHeading"-->
+                    <!--android:text="@string/walking_for_history"/>-->
+                <ImageView
+                    android:id="@+id/tv_protein"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/icons_walking"/>
+                <TextView
+                    android:id="@+id/tv_walking_value"
+                    style="@style/SubHeading"
+                    android:layout_marginStart="5dp"
+                    android:layout_toRightOf="@+id/tv_protein"
+                    android:text="@string/steps"/>
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_fat"-->
+                    <!--style="@style/SubHeading"-->
+                    <!--android:layout_toRightOf="@+id/tv_walking_value"-->
+                    <!--android:text="@string/running_for_history"/>-->
+                <ImageView
+                    android:id="@+id/tv_fat"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/tv_walking_value"
+                    android:src="@drawable/icons_running"/>
+                <TextView
+                    android:id="@+id/tv_running_value"
+                    style="@style/SubHeading"
+                    android:layout_marginStart="5dp"
+                    android:layout_toRightOf="@+id/tv_fat"
+                    android:text="@string/steps"/>
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_sugar"-->
+                    <!--style="@style/SubHeading"-->
+                    <!--android:layout_toLeftOf="@+id/tv_stairs_value"-->
+                    <!--android:text="@string/staris_for_history"/>-->
+                <ImageView
+                    android:id="@+id/tv_sugar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/tv_running_value"
+                    android:src="@drawable/icons_stairs"/>
+
+                <TextView
+                    android:id="@+id/tv_stairs_value"
+                    style="@style/SubHeading"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/tv_sugar"
+                    android:text="@string/steps"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

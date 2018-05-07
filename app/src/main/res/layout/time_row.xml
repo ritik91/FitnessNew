@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:background="@drawable/rect_back">
+
+    <TextView
+        android:padding="@dimen/table_padding"
+        android:background="@drawable/rect_back"
+        android:text="ID"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:id="@+id/nutrient_id" />
+
+
+    <TextView
+        android:padding="@dimen/table_padding"
+        android:background="@drawable/rect_back"
+        android:text="nutrient"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:id="@+id/nutrient" />
+
+    <TextView
+        android:padding="@dimen/table_padding"
+        android:background="@drawable/rect_back"
+        android:text="unit"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:id="@+id/unit" />
+
+    <TextView
+        android:padding="@dimen/table_padding"
+        android:background="@drawable/rect_back"
+        android:text="value"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:id="@+id/value" />
+    <TextView
+        android:padding="@dimen/table_padding"
+        android:background="@drawable/rect_back"
+        android:text="gm"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:id="@+id/gm" />
+</LinearLayout>

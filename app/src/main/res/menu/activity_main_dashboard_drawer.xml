@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:checkable="true"
+            android:checked="false"
+            android:icon="@drawable/icons_home"
+            android:title="@string/home" />
+
+
+        <item
+            android:id="@+id/my_account"
+            android:checkable="true"
+            android:checked="false"
+            android:icon="@drawable/icons_user_name"
+            android:title="@string/my_account" />
+
+        <item
+            android:id="@+id/my_activity"
+            android:checkable="true"
+            android:checked="false"
+            android:icon="@drawable/icons_running"
+            android:title="@string/my_activity" />
+
+        <item
+            android:id="@+id/my_diet"
+            android:checkable="true"
+            android:checked="false"
+            android:icon="@drawable/icons_restaurant"
+            android:title="@string/my_diet" />
+
+        <item
+            android:id="@+id/track_me_report"
+            android:checkable="true"
+            android:checked="false"
+            android:icon="@drawable/icons_report"
+            android:title="@string/track_me" />
+
+        <item
+            android:id="@+id/blog_post"
+            android:checkable="true"
+            android:checked="false"
+            android:icon="@drawable/icons_blog"
+            android:title="@string/blog" />
+
+        <item
+            android:id="@+id/my_log"
+            android:checkable="true"
+            android:checked="false"
+            android:icon="@drawable/icons_reading"
+            android:title="@string/log" />
+    </group>
+
+    <!--  Sub Menus  -->
+    <item android:title="@string/others">
+        <menu>
+            <group android:checkableBehavior="none">
+
+                <item
+                    android:id="@+id/notifications"
+                    android:checkable="true"
+                    android:checked="false"
+                    android:icon="@drawable/icons_notification"
+                    android:title="@string/notification" />
+
+                <!--<item-->
+                    <!--andrtag_idd:idtag_id@+id/settings"-->
+                    <!--android:icon="@drawable/icons_setting"-->
+                    <!--android:title="@string/settings" />-->
+
+                <item
+                    android:id="@+id/help"
+                    android:icon="@drawable/icons_help"
+                    android:title="@string/feedback" />
+
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/icons_sign_out"
+                    android:title="@string/log_out" />
+            </group>
+        </menu>
+    </item>
+</menu>

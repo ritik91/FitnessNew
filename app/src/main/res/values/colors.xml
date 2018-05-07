@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#EF6C00</color>
+    <color name="colorPrimaryDark">#F44336</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="textColor">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="background_color">#009688</color>
+    <color name="black">#000000</color>
+    <color name="white_greyish">#EEEEEE</color>
+    <color name="button_selectorcolor">#9E9E9E</color>
+    <color name="signUp_text_color">#D32F2F</color>
+    <color name="view_line_color">#D84315</color>
+    <color name="clientHeading">#313131</color>
+    <color name="clientSubHeading">#898989</color>
+    <color name="heading_gray">#898989</color>
+    <color name="list_item_blue">#4166b0</color>
+
+    <!-- Nutrition PieChart -->
+    <color name="colorFat">#ffd3e5</color>
+    <color name="colorCarb">#f25e5e</color>
+    <color name="colorProtein">#c97e95</color>
+    <color name="colorFiber">#CCFF33</color>
+    <color name="colorSugar">#f4a644</color>
+    <color name="colorCalories">#9adbcf</color>
+
+    <!-- Tracking LineChart -->
+    <color name="colorCal">#ba0b97</color>
+    <color name="colorStep">#ffc9c9</color>
+    <color name="colorDist">#eed369</color>
+    <color name="colorWalk">#69a39c</color>
+    <color name="colorRun">	#65cde3</color>
+    <color name="colorStair">#c3bef9</color>
+
+    <!-- Activity Tracker animation chart -->
+    <color name="chart_value_1">#E94134</color>
+    <color name="chart_value_2">#EF6C00</color>
+    <color name="chart_value_3">#FF665A</color>
+    <color name="chart_value_4">#FF877D</color>
+    <color name="chart_value_5">#FFAFA9</color>
+
+    <!-- SearchView style -->
+    <color name="theme_primary_text">#212121</color>
+    <color name="theme_secondary_text">#727272</color>
+    <color name="theme_primary_text_inverted">#ffffff</color>
+    <color name="theme_secondary_text_inverted">#8affffff</color>
+    <color name="theme_icons">#FFFFFF</color>
+    <color name="theme_divider">#B6B6B6</color>
+
+    <color name="appBack">#feecd4</color>
+
+</resources>
